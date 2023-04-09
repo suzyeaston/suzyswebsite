@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <main id="content" class="site-content">
+  <div id="my-name">Suzy Easton</div>
   <?php
   if (have_posts()) :
     while (have_posts()) : the_post(); ?>
