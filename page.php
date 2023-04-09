@@ -11,14 +11,7 @@
         </header>
 
         <div class="entry-content">
-          <?php
-          the_content();
-
-          wp_link_pages(array(
-            'before' => '<div class="page-links">' . __('Pages:', 'your-theme-textdomain'),
-            'after'  => '</div>',
-          ));
-          ?>
+          <?php the_content(); ?>
         </div>
       </article>
 
@@ -29,5 +22,4 @@
   ?>
 </main>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
