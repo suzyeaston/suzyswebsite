@@ -1,33 +1,23 @@
 <?php
-function orion_theme_setup() {
-    // Add theme support for various features
-    add_theme_support('automatic-feed-links');
-    add_theme_support('title-tag');
-    add_theme_support('post-thumbnails');
-
-    // Register navigation menu
-    register_nav_menus(array(
-        'primary' => __('Primary Menu', 'suzyswebsite'),
-    ));
-
-    // Add theme support for HTML5 markup
-    add_theme_support('html5', array(
-        'search-form',
-        'comment-form',
-        'comment-list',
-        'gallery',
-        'caption',
-    ));
+function suzyeaston_theme_setup() {
+  add_theme_support('post-thumbnails');
 }
-add_action('after_setup_theme', 'orion_theme_setup');
+add_action('after_setup_theme', 'suzyeaston_theme_setup');
 
-function orion_theme_scripts() {
-    // Enqueue styles
-    wp_enqueue_style('style', get_stylesheet_uri());
-
-    // Enqueue scripts
-    wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('galaxy-js', get_template_directory_uri() . '/js/galaxy.js', array(), '1.0', true);
+function suzyeaston_scripts() {
+  wp_enqueue_style('suzyswebsite-main-style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+  wp_enqueue_script('suzyswebsite-custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
+  wp_enqueue_script('suzyswebsite-galaxy-js', get_template_directory_uri() . '/js/galaxy.js', array('jquery'), '1.0', true);
 }
-add_action('wp_enqueue_scripts', 'orion_theme_scripts');
+add_action('wp_enqueue_scripts', 'suzyeaston_scripts');
+
+function suzyeaston_menus() {
+  register_nav_menus(
+    array(
+      'primary' => __('Primary Menu'),
+      'footer' => __('Footer Menu'),
+    )
+  );
+}
+add_action('init', 'suzyeaston_menus');
 ?>
