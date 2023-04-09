@@ -2,6 +2,7 @@
 
 <main id="content" class="site-content">
   <div id="my-name">Suzy Easton</div>
+  <div id="player-start">PLAYER 1</div>
   <?php
   if (have_posts()) :
     while (have_posts()) : the_post(); ?>
