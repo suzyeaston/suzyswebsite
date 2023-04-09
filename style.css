@@ -53,3 +53,40 @@ body {
 #player-start:hover {
   background-color: rgba(0, 255, 0, 0.5);
 }
+
+#player-ready-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#player-ready-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+  color: #00FF00;
+  margin-bottom: 20px;
+}
+
+#player-ready-yes,
+#player-ready-no {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  color: #00FF00;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#player-ready-yes:hover,
+#player-ready-no:hover {
+  background-color: rgba(0, 255, 0, 0.5);
+}
