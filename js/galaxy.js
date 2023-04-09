@@ -51,4 +51,27 @@ document.addEventListener("DOMContentLoaded", function () {
       context.restore();
     }
   });
+
+  const nameElement = document.getElementById('my-name');
+  const name = nameElement.innerText;
+  const animationDelay = 150; // in milliseconds
+  const animationStep = 20; // in pixels
+  const animationDuration = name.length * animationDelay;
+
+  nameElement.innerText = ''; // clear the original name
+
+  for (let i = 0; i < name.length; i++) {
+    const charElement = document.createElement('span');
+    charElement.innerText = name.charAt(i);
+    charElement.style.position = 'relative';
+    charElement.style.left = '0';
+    charElement.style.transition = `left ${animationDuration}ms linear`;
+    charElement.style.transitionDelay = `${i * animationDelay}ms`;
+    nameElement.appendChild(charElement);
+
+    setTimeout(() => {
+      charElement.style.left = `${(i - name.length / 2) * animationStep}px`;
+    }, 100);
+  }
 });
+
