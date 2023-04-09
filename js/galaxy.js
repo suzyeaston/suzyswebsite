@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       const radius = Math.random() * layer;
-      const brightness = Math.random() * 0.5 + 0.3 - 0.1 * (layer - 1);
+      const brightness = Math.random() * 0.4 + 0.4 - 0.1 * (layer - 1);
 
       context.beginPath();
       context.arc(x, y, radius, 0, 2 * Math.PI, false);
@@ -57,10 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const nameElement = document.createElement("div");
   nameElement.id = "my-name";
   nameElement.textContent = playerName;
+  nameElement.style.textShadow = "0 0 2px #00FF00";
 
   const playerStart = document.createElement("div");
   playerStart.id = "player-start";
-  playerStart.innerHTML = "PLAYER 1<ul><li><a href=\"#\">Start</a></li><li><a href=\"#\">Two players</a></li></ul>";
+  playerStart.innerHTML = "Player One - Start";
 
   document.body.appendChild(nameElement);
   document.body.appendChild(playerStart);
