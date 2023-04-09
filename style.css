@@ -27,24 +27,53 @@ body {
 }
 
 #my-name {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Press Start 2P', cursive;
-  font-size: 48px;
+  font-size: 80px;
   color: #0f0;
   text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 15px #0f0;
-  transition: all 1s ease-out;
 }
 
 #player-start {
   position: fixed;
-  top: 10px;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Press Start 2P', cursive;
   font-size: 32px;
   color: #fff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+}
+
+#player-start ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#player-start li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#player-start li:last-child {
+  margin-right: 0;
+}
+
+#player-start a {
+  display: inline-block;
+  padding: 10px;
+  background-color: #0f0;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 5px;
+}
+
+#player-start a:hover {
+  background-color: #fff;
+  color: #0f0;
 }
