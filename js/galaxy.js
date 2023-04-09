@@ -63,11 +63,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  function createPlayerReadyOverlay() {
+    const overlay = document.createElement("div");
+    overlay.id = "player-ready-overlay";
+    overlay.style.display = "none";
+    overlay.innerHTML = `
+      <div id="player-ready-text">Player 1 Ready?</div>
+      <button id="player-ready-yes">Yes</button>
+      <button id="player-ready-no">No</button>
+    `;
+
+    overlay.addEventListener("click", (event) => {
+      if (event.target.id === "player-ready-yes") {
+        window.location.href = "https://suzyeaston.tech/level-1/";
+      } else if (event.target.id === "player-ready-no") {
+        overlay.style.display = "none";
+        playerStart.style.display = "block";
+      }
+    });
+
+    document.body.appendChild(overlay);
+  }
+
+  createPlayerReadyOverlay();
+
   playerStart.addEventListener("click", () => {
     if (!playerStartVisible) {
       playerStart.style.display = "none";
       myName.style.filter = "none";
       playerStartVisible = true;
+    } else {
+      document.getElementById("player-ready-overlay").style.display = "flex";
     }
   });
 });
