@@ -1,5 +1,5 @@
 /*
-Theme Name: Orion Theme
+Theme Name: Suzy's Orion Theme
 Theme URI: https://github.com/suzypriceless/suzyswebsite
 Author: Suzy Easton
 Author URI: https://suzyeaston.tech
@@ -10,3 +10,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: suzyswebsite-theme
 Tags: custom, multimedia, orion, suzy
 */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+#starry-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
