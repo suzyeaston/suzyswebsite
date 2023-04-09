@@ -33,7 +33,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function drawText() {
+    const text = "Suzy Easton";
+    const font = "48px Press Start 2P";
+    const fillStyle = "#0f0";
+    const strokeStyle = "#0f0";
+    const lineWidth = 3;
+    const x = canvas.width / 2;
+    const y = canvas.height / 2;
+    const offset = 30;
+
+    context.font = font;
+    context.textAlign = "center";
+    context.textBaseline = "middle";
+    context.strokeStyle = strokeStyle;
+    context.lineWidth = lineWidth;
+    context.strokeText(text, x, y);
+    context.fillStyle = fillStyle;
+    context.fillText(text, x, y);
+
+    context.font = "16px Press Start 2P";
+    context.fillText("PLAYER 1", x, y + offset);
+  }
+
   starryBackground.appendChild(canvas);
   createStarryBackground();
+  drawText();
 
-  window
+  window.addEventListener("resize", () => {
+    resizeCanvas();
+    createStarryBackground();
+    drawText();
+  });
+
+  window.addEventListener("scroll", () => {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let layer = 1; layer <= 3; layer++) {
+      context.save();
+      context.translate(0, window.pageYOffset * (1 - layer / 5));
+      drawStars(layer, layer);
+      context.restore();
+    }
+
+    drawText();
+  });
+});
+
