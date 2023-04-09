@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.height = window.innerHeight;
   }
 
-  function drawStars() {
-    const starCount = 250;
+  function drawStars(layer, speed) {
+    const starCount = 100 * layer;
 
     for (let i = 0; i < starCount; i++) {
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
-      const radius = Math.random() * 2;
-      const brightness = Math.random() * 0.5 + 0.3;
+      const radius = Math.random() * layer;
+      const brightness = Math.random() * 0.5 + 0.3 - 0.1 * (layer - 1);
 
       context.beginPath();
       context.arc(x, y, radius, 0, 2 * Math.PI, false);
@@ -26,7 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function createStarryBackground() {
     resizeCanvas();
-    drawStars();
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let layer = 1; layer <= 3; layer++) {
+      drawStars(layer, layer);
+    }
   }
 
   starryBackground.appendChild(canvas);
@@ -35,5 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", () => {
     resizeCanvas();
     createStarryBackground();
+  });
+
+  window.addEventListener("scroll", () => {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let layer = 1; layer <= 3; layer++) {
+      context.save();
+      context.translate(0, window.pageYOffset * (1 - layer / 5));
+      drawStars(layer, layer);
+      context.restore();
+    }
   });
 });
