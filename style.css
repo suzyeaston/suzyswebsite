@@ -37,3 +37,14 @@ body {
   text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 15px #0f0;
   transition: all 1s ease-out;
 }
+
+#player-start {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+}
