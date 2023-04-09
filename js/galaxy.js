@@ -63,37 +63,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  function createPlayerReadyOverlay() {
-    const overlay = document.createElement("div");
-    overlay.id = "player-ready-overlay";
-    overlay.style.display = "none";
-    overlay.innerHTML = `
-      <div id="player-ready-text">Player 1 Ready?</div>
-      <button id="player-ready-yes">Yes</button>
-      <button id="player-ready-no">No</button>
-    `;
-
-    overlay.addEventListener("click", (event) => {
-      if (event.target.id === "player-ready-yes") {
-        window.location.href = "https://suzyeaston.tech/level-1/";
-      } else if (event.target.id === "player-ready-no") {
-        overlay.style.display = "none";
-        playerStart.style.display = "block";
-      }
-    });
-
-    document.body.appendChild(overlay);
-  }
-
-  createPlayerReadyOverlay();
-
   playerStart.addEventListener("click", () => {
     if (!playerStartVisible) {
       playerStart.style.display = "none";
       myName.style.filter = "none";
       playerStartVisible = true;
-    } else {
-      document.getElementById("player-ready-overlay").style.display = "flex";
+
+      // Create Player 1 Ready? overlay and buttons
+      const playerReadyOverlay = document.createElement("div");
+      playerReadyOverlay.id = "player-ready-overlay";
+
+      const playerReadyText = document.createElement("div");
+      playerReadyText.id = "player-ready-text";
+      playerReadyText.innerText = "Player 1 Ready?";
+
+      const playerReadyYes = document.createElement("button");
+      playerReadyYes.id = "player-ready-yes";
+      playerReadyYes.innerText = "Yes";
+      playerReadyYes.addEventListener("click", () => {
+        window.location.href = "https://suzyeaston.tech/level-1/";
+      });
+
+      const playerReadyNo = document.createElement("button");
+      playerReadyNo.id = "player-ready-no";
+      playerReadyNo.innerText = "No";
+      playerReadyNo.addEventListener("click", () => {
+        playerReadyOverlay.remove();
+        playerStart.style.display = "block";
+        playerStartVisible = false;
+      });
+
+      playerReadyOverlay.appendChild(playerReadyText);
+      playerReadyOverlay.appendChild(playerReadyYes);
+      playerReadyOverlay.appendChild(playerReadyNo);
+
+      document.body.appendChild(playerReadyOverlay);
     }
   });
 });
