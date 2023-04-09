@@ -36,42 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
   starryBackground.appendChild(canvas);
   createStarryBackground();
 
-  window.addEventListener("resize", () => {
-    resizeCanvas();
-    createStarryBackground();
-  });
-
-  window.addEventListener("scroll", () => {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let layer = 1; layer <= 3; layer++) {
-      context.save();
-      context.translate(0, window.pageYOffset * (1 - layer / 5));
-      drawStars(layer, layer);
-      context.restore();
-    }
-  });
-
-  const nameElement = document.getElementById('my-name');
-  const name = nameElement.innerText;
-  const animationDelay = 150; // in milliseconds
-  const animationStep = 10; // in pixels
-  const animationDuration = name.length * animationDelay;
-
-  nameElement.innerText = ''; // clear the original name
-
-  for (let i = 0; i < name.length; i++) {
-    const charElement = document.createElement('span');
-    charElement.innerText = name.charAt(i);
-    charElement.style.position = 'relative';
-    charElement.style.left = '0';
-    charElement.style.transition = `left ${animationDuration}ms linear`;
-    charElement.style.transitionDelay = `${i * animationDelay}ms`;
-    nameElement.appendChild(charElement);
-
-    setTimeout(() => {
-      charElement.style.left = `${(i - name.length / 2) * animationStep}px`;
-    }, 100);
-  }
-});
-
+  window
