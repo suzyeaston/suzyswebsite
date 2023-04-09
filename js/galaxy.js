@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nameElement = document.getElementById('my-name');
   const name = nameElement.innerText;
   const animationDelay = 150; // in milliseconds
-  const animationStep = 20; // in pixels
+  const animationStep = 10; // in pixels
   const animationDuration = name.length * animationDelay;
 
   nameElement.innerText = ''; // clear the original name
