@@ -46,7 +46,7 @@
 
   <h2>Contact</h2>
 
-  <p>If you have any questions or comments about Suzy's Retro Gaming Website, feel free to contact me at officialsuzytech@icloud.com.</p>
+  <p>If you have any questions or comments about Suzy's Retro Gaming Website, feel free to contact me at suzyeaston@icloud.com.</p>
 
 </body>
 
