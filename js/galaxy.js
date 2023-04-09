@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.createElement("canvas");
   const context = canvas.getContext("2d");
   const starryBackground = document.getElementById("starry-background");
+  const playerStart = document.getElementById("player-start");
+  const myName = document.getElementById("my-name");
+
+  let playerStartVisible = false;
 
   function resizeCanvas() {
     canvas.width = window.innerWidth;
@@ -15,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       const radius = Math.random() * layer;
-      const brightness = Math.random() * 0.4 + 0.4 - 0.1 * (layer - 1);
+      const brightness = Math.random() * 0.5 + 0.3 - 0.1 * (layer - 1);
 
       context.beginPath();
       context.arc(x, y, radius, 0, 2 * Math.PI, false);
@@ -24,9 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function drawBackground() {
+    context.fillStyle = "rgba(0, 0, 0, 0.8)";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+  }
+
   function createStarryBackground() {
     resizeCanvas();
     context.clearRect(0, 0, canvas.width, canvas.height);
+    drawBackground();
 
     for (let layer = 1; layer <= 3; layer++) {
       drawStars(layer, layer);
@@ -43,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", () => {
     context.clearRect(0, 0, canvas.width, canvas.height);
+    drawBackground();
 
     for (let layer = 1; layer <= 3; layer++) {
       context.save();
@@ -52,17 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const playerName = "Suzy Easton";
-
-  const nameElement = document.createElement("div");
-  nameElement.id = "my-name";
-  nameElement.textContent = playerName;
-  nameElement.style.textShadow = "0 0 2px #00FF00";
-
-  const playerStart = document.createElement("div");
-  playerStart.id = "player-start";
-  playerStart.innerHTML = "Player One - Start";
-
-  document.body.appendChild(nameElement);
-  document.body.appendChild(playerStart);
+  playerStart.addEventListener("click", () => {
+    if (!playerStartVisible) {
+      playerStart.style.display = "none";
+      myName.style.filter = "none";
+      playerStartVisible = true;
+    }
+  });
 });
