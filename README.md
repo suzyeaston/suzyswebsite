@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  Suzy's Retro Gaming Website
 </head>
 
 <body>
