@@ -33,37 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function drawText() {
-    const text = "Suzy Easton";
-    const font = "48px Press Start 2P";
-    const fillStyle = "#0f0";
-    const strokeStyle = "#0f0";
-    const lineWidth = 3;
-    const x = canvas.width / 2;
-    const y = canvas.height / 2;
-    const offset = 30;
-
-    context.font = font;
-    context.textAlign = "center";
-    context.textBaseline = "middle";
-    context.strokeStyle = strokeStyle;
-    context.lineWidth = lineWidth;
-    context.strokeText(text, x, y);
-    context.fillStyle = fillStyle;
-    context.fillText(text, x, y);
-
-    context.font = "16px Press Start 2P";
-    context.fillText("PLAYER 1", x, y + offset);
-  }
-
   starryBackground.appendChild(canvas);
   createStarryBackground();
-  drawText();
 
   window.addEventListener("resize", () => {
     resizeCanvas();
     createStarryBackground();
-    drawText();
   });
 
   window.addEventListener("scroll", () => {
@@ -75,8 +50,18 @@ document.addEventListener("DOMContentLoaded", function () {
       drawStars(layer, layer);
       context.restore();
     }
-
-    drawText();
   });
-});
 
+  const playerName = "Suzy Easton";
+
+  const nameElement = document.createElement("div");
+  nameElement.id = "my-name";
+  nameElement.textContent = playerName;
+
+  const playerStart = document.createElement("div");
+  playerStart.id = "player-start";
+  playerStart.innerHTML = "PLAYER 1<ul><li><a href=\"#\">Start</a></li><li><a href=\"#\">Two players</a></li></ul>";
+
+  document.body.appendChild(nameElement);
+  document.body.appendChild(playerStart);
+});
