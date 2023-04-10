@@ -13,6 +13,10 @@
         </header>
 
         <div class="entry-content">
+          <!-- Add the following lines inside entry-content div -->
+          <?php if (is_page('level-1')): ?>
+            <div id="bio-text"></div>
+          <?php endif; ?>
           <?php the_content(); ?>
         </div>
       </article>
