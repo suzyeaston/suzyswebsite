@@ -1,12 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const bioText = document.getElementById("bio-text");
-  const bioContent = `Welcome to Level 1: The Origin of Suzy's Epic Journey
-From Vancouver, BC, during the early 80s, a new person came into existence. Suzy Easton, our protagonist, dedicated her early years to competitive swimming, with dreams of Olympic triumph...
-However, when she turned 14, Suzy realized that her competitive swimming days were numbered.
-Ready for a new challenge, she traded her swim cap for a guitar pick.
-Little did she know that this was only the beginning of an incredible journey that would take her across Canada, from music to IT,
-and eventually lead her back home to Metro Vancouver, in Burnaby, recording music and making video games...
-Join Suzy as she navigates through the levels of life, building an extraordinary story of personal growth, adventure, and self-discovery. Will she find her ultimate quest? Press START to begin the adventure.`;
+  const bioContent = `Welcome to Level 1: Suzy's Legendary Saga! Born in 80s Vancouver, Suzy Easton, our hero, first pursued Olympic swimming while being influenced by soul, jazz, classical, and rock music. Embracing her musical passion, she began playing rock shows in her hometown.. Press START and begin the adventure of an epic quest with growth, adventure, and self-discovery.`;
   let currentIndex = 0;
 
   function typeWriter() {
