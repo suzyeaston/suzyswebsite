@@ -1,8 +1,11 @@
 <?php get_header(); ?>
 
 <main id="content" class="site-content">
-  <div id="my-name">Suzy Easton</div>
-  <div id="player-start">PLAYER 1</div>
+  <!-- Add this line to check if it's the homepage -->
+  <?php if (is_front_page()): ?>
+    <div id="my-name">Suzy Easton</div>
+    <div id="player-start">PLAYER 1</div>
+  <?php endif; ?>
   <?php
   if (have_posts()) :
     while (have_posts()) : the_post(); ?>
