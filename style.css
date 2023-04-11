@@ -117,3 +117,13 @@ body {
   background-color: rgba(0, 255, 0, 0.5);
   transform: translate(-50%, -50%) scale(1.1);
 }
+
+#click-hint {
+  position: fixed;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 15px;
+  color: #00FF00;
+}
