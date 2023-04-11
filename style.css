@@ -126,4 +126,5 @@ body {
   font-family: 'Press Start 2P', cursive;
   font-size: 15px;
   color: #00FF00;
+  z-index: 10;
 }
