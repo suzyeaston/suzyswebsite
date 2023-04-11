@@ -14,7 +14,6 @@ function suzyeaston_scripts() {
   }
 
   wp_enqueue_script('suzyswebsite-typing-effect-js', get_template_directory_uri() . '/js/typing-effect.js', array(), '1.0', true);
-};
 }
 add_action('wp_enqueue_scripts', 'suzyeaston_scripts', 5);
 
