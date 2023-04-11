@@ -112,3 +112,8 @@ body {
 #player-start {
   animation: pulse 2s infinite;
 }
+
+#player-start:hover {
+  background-color: rgba(0, 255, 0, 0.5);
+  transform: translate(-50%, -50%) scale(1.1);
+}
