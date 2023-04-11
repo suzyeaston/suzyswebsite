@@ -16,6 +16,9 @@
         </header>
 
         <div class="entry-content">
+          <?php if (is_page('contact')): ?>
+          <div id="contact-email">info@suzyeaston.tech</div>
+          <?php endif; ?>
           <?php if (is_page('level-1')): ?>
             <div id="bio-text"></div>
           <?php endif; ?>
