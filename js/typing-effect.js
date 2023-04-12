@@ -1,10 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const bioText = document.getElementById("bio-text");
-  const bioContent = `Welcome to Level 1: Suzy's Galactic Groove Odyssey! In a world where the rhythm of the universe is at stake, our hero, Suzy Easton, embarks on an epic quest through the cosmic soundscapes. 
-  Born during the early 80s in Vancouver, Suzy was raised on a diverse diet of soul, jazz, classical, and rock music. Excelling in competitive swimming at an early age, she discovered her true calling was to dive into the depths of the musical multiverse. Suzy's journey begins on her home turf, where she must first conquer the local rock show scene. 
-  With each triumph, she gains new skills and powers to help her face the challenges that lie ahead. 
-  Will Suzy restore harmony to the galaxy and become the ultimate Groove Guardian? 
-  Press START and join Suzy on a thrilling adventure filled with growth, discovery, and high-fidelity action!`;
+  const bioContent = `Dun Dun Dun! Level 1: Suzy's Galactic Groove Invaders! In a universe where harmony is under siege, technologist Suzy Easton, Canucks fan (for real), former national touring bassist, taco lover, and poker enthusiast from Vancouver, launches into an 80s arcade-style adventure... 
+  excitement, she wrote... can she restore balance to the galaxy, just as the Canucks overcame the odds to make their first-ever Stanley Cup Final appearance in 1982 (lol)? Get ready to power up and take on the challenge!`;
 
   let currentIndex = 0;
 
