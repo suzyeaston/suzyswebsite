@@ -23,7 +23,6 @@
             <div id="bio-text"></div>
             <canvas id="guitar-canvas" width="300" height="800" style="display:none;"></canvas>
             <button id="start-game-button" style="display:none;">Let's goooooooo</button>
-            <?php endif; ?>
           <?php endif; ?>
           <?php the_content(); ?>
         </div>
@@ -37,4 +36,3 @@
 </main>
 
 <?php get_footer(); ?>
-
