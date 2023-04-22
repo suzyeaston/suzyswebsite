@@ -1,0 +1,13 @@
+.how-to-reach-suzy {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2rem;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+  animation: blink-animation 1.2s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
