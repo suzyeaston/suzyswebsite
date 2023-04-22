@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
       playerReadyYes.id = "player-ready-yes";
       playerReadyYes.innerText = "Yes";
       playerReadyYes.addEventListener("click", () => {
-        window.location.href = "https://suzyeaston.tech/level-1/";
+        window.location.href = "https://suzyeaston.tech/suzys-online-80s-video-game/";
       });
 
       const playerReadyNo = document.createElement("button");
