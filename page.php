@@ -19,9 +19,9 @@
           <?php if (is_page('contact')): ?>
           <div id="contact-email">info@suzyeaston.tech</div>
           <?php endif; ?>
-          <?php if (is_page('Suzy\'s Online 80s Video Game')): ?> <!-- Update this line -->
+          <?php if (is_page('Suzy\'s Online 80s Video Game')): ?>
             <div id="bio-text"></div>
-            <canvas id="guitar-canvas" width="300" height="800" style="display:none;"></canvas> <!-- Add this line -->
+            <canvas id="guitar-canvas" width="300" height="800" style="display:none;"></canvas>
             <button id="start-game-button" style="display:none;">Let's goooooooo</button>
             <?php endif; ?>
           <?php endif; ?>
