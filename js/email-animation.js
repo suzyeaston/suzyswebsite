@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function initEmailAnimation() {
   const email = document.getElementById("contact-email");
 
   if (!email) {
@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function animateEmail() {
     email.style.transition = "opacity 1s";
     email.style.opacity = "1";
-    // Add racing car animation code here
   }
 
   function simulateF1CarDrive() {
@@ -16,4 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   simulateF1CarDrive();
-});
+}
+
+document.addEventListener("DOMContentLoaded", initEmailAnimation);
+
+// Add the following event listener to re-initialize the animation when the page is loaded via AJAX
+document.body.addEventListener("post-load", initEmailAnimation);
+
