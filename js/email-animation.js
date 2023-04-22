@@ -19,6 +19,5 @@ function initEmailAnimation() {
 
 document.addEventListener("DOMContentLoaded", initEmailAnimation);
 
-// Add the following event listener to re-initialize the animation when the page is loaded via AJAX
 document.body.addEventListener("post-load", initEmailAnimation);
 
