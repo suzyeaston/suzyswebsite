@@ -138,3 +138,29 @@ body {
   transform: translate(-50%, -50%);
   opacity: 0;
 }
+
+nav {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  padding-top: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: #00FF00;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #FFFFFF;
+}
