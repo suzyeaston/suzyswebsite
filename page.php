@@ -19,7 +19,7 @@
           <?php if (is_page('contact')): ?>
           <div id="contact-email">info@suzyeaston.tech</div>
           <?php endif; ?>
-          <?php if (is_page('level-1')): ?>
+          <?php if (is_page('Suzy\'s Online 80s Video Game')): ?> <!-- Update this line -->
             <div id="bio-text"></div>
           <?php endif; ?>
           <?php the_content(); ?>
@@ -34,3 +34,4 @@
 </main>
 
 <?php get_footer(); ?>
+
