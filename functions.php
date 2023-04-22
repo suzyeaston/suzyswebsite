@@ -16,6 +16,7 @@ function suzyeaston_scripts() {
     wp_enqueue_script('suzyswebsite-email-animation-js', get_template_directory_uri() . '/js/email-animation.js', array(), '1.0', true);
   }
 
+  wp_enqueue_script('suzyswebsite-nav-listener-js', get_template_directory_uri() . '/js/nav-listener.js', array('jquery'), '1.0', true); // Add this line
   wp_enqueue_script('suzyswebsite-typing-effect-js', get_template_directory_uri() . '/js/typing-effect.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'suzyeaston_scripts', 5);
@@ -30,3 +31,4 @@ function suzyeaston_menus() {
 }
 add_action('init', 'suzyeaston_menus');
 ?>
+
