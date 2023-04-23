@@ -16,15 +16,6 @@
         </header>
 
         <div class="entry-content">
-          <?php if (is_page('contact')): ?>
-          <div id="contact-details">
-            <div class="contact-item" id="contact-name">Suzy Easton</div>
-            <div class="contact-item" id="contact-location">Vancouver, BC</div>
-            <div class="contact-item" id="contact-email">info@suzyeaston.tech</div>
-            <div class="contact-item" id="contact-instagram"><a href="https://www.instagram.com/officialsuzyeaston/" target="_blank">officialsuzyeaston (Instagram)</a></div>
-            <div class="contact-item" id="contact-twitter"><a href="https://twitter.com/officialsuzye" target="_blank">officialsuzye (Twitter)</a></div>
-          </div>
-          <?php endif; ?>
           <?php if (is_page('Suzy\'s Online 80s Video Game')): ?>
             <div id="bio-text"></div>
             <canvas id="guitar-canvas" width="300" height="800" style="display:none;"></canvas>
@@ -42,4 +33,5 @@
 </main>
 
 <?php get_footer(); ?>
+
 
