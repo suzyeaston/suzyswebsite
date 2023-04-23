@@ -11,8 +11,12 @@
         $('#content').load(href + ' #content > *', function() {
           // Trigger the post-load event
           document.body.dispatchEvent(new Event('post-load'));
+
+          // Update the browser's address bar
+          window.history.pushState({}, "", href);
         });
       }
     });
   });
 })(jQuery);
+
