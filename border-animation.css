@@ -3,7 +3,7 @@
     background-position: 0 0;
   }
   100% {
-    background-position: 8px 0;
+    background-position: 16px 0;
   }
 }
 
@@ -24,7 +24,7 @@ nav:after {
     currentColor 50%,
     transparent 50%
   );
-  background-size: 8px 1px;
+  background-size: 16px 1px; /* Change this line */
   animation: border-dots 1s linear infinite;
 }
 
