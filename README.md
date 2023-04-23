@@ -1,53 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
+  <title>README.md - Suzy's Orion Theme</title>
   <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 18px;
+    }
+    code {
+      background-color: #F0F0F0;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+  </style>
 </head>
-
 <body>
+  <h1>🚀 Suzy's Orion Theme</h1>
+  <p>A custom WordPress theme inspired by 80s Galaga-like video games and developed by Suzy Easton, a musician and software QA from Vancouver, BC and based in Burnaby. This theme features an interactive musical album, a starry background, and a rockin' vibe.</p>
 
-  <h1>Suzy's Retro Gaming Website</h1>
-
-  <p>Welcome to my custom WordPress theme featuring retro games, animations, and music! NOTE!! This website and theme was created on April 8, 2023, and will continue to be updated with new content and features so we are just beginning.</p>
-
-  <h2>Description</h2>
-
-  <p>Suzy's Retro Gaming Website is a project I created to showcase my web development skills and love of old-school video games. The website features a custom WordPress theme with a starry background, Galaga-inspired title text, and a video game-inspired menu.</p>
-
-  <p>The website also includes a custom JavaScript script for the starry background, as well as custom CSS styles for the menu, title text, and other elements.</p>
-
-  <h2>Installation</h2>
-
-  <ol>
-    <li>Download the ZIP file from my GitHub repository</li>
-    <li>Upload the ZIP file to your WordPress site and install the theme</li>
-    <li>Activate the theme and customize it to your liking</li>
-    <li>Enjoy your new retro gaming website!</li>
-  </ol>
-
-  <h2>Usage</h2>
-
-  <p>Suzy's Retro Gaming Website is designed to be a fun and entertaining website for anyone who loves old-school video games. You can browse the site's pages, read blog posts, and play retro games.</p>
-
-  <p>The website includes a custom menu with links to various pages, as well as a search bar and social media icons.</p>
-
-  <h2>Credits</h2>
-
+  <h2>🎸 Features</h2>
   <ul>
-    <li>Starry background JavaScript script adapted from code by David DeSandro: <a href="https://codepen.io/desandro/pen/eVJpPN">https://codepen.io/desandro/pen/eVJpPN</a></li>
-    <li>Galaga-inspired title text created with Textcraft: <a href="https://textcraft.net/">https://textcraft.net/</a></li>
-    <li>Retro games provided by Archive.org: <a href="https://archive.org/details/consolelivingroom">https://archive.org/details/consolelivingroom</a></li>
+    <li>80s-inspired design</li>
+    <li>Interactive musical album</li>
+    <li>Starry background mimicking Galaga</li>
+    <li>Responsive layout</li>
   </ul>
 
-  <h2>License</h2>
+  <h2>📂 File Structure</h2>
+  <p>Here's a list of the main files in this project:</p>
+  <ul>
+    <li><code>header.php</code> - The header file containing the site's head and navigation</li>
+    <li><code>page.php</code> - The main template file for pages</li>
+    <li><code>style.css</code> - The main stylesheet for the theme</li>
+    <li><code>functions.php</code> - Theme functions and script enqueueing</li>
+    <li><code>Galaxy.js</code> - JavaScript file for creating the starry background</li>
+    <li><code>email-animation.js</code> - JavaScript file for email animation on the contact page</li>
+  </ul>
 
-  <p>This theme is licensed under the GNU General Public License v2 or later. Feel free to modify and distribute the theme as needed, but please credit the original source.</p>
+  <h2>🔧 Installation</h2>
+  <p>Follow these steps to install the theme:</p>
+  <ol>
+    <li>Download the theme files as a ZIP from the GitHub repository</li>
+    <li>Log in to your WordPress admin dashboard</li>
+    <li>Go to <code>Appearance > Themes</code></li>
+    <li>Click <code>Add New</code> and then <code>Upload Theme</code></li>
+    <li>Upload the downloaded ZIP file and click <code>Install Now</code></li>
+    <li>Activate the theme once it's installed</li>
+  </ol>
 
-  <h2>Contact</h2>
-
-  <p>If you have any questions or comments about Suzy's Retro Gaming Website, feel free to contact me at suzyeaston@icloud.com.</p>
-
+  <h2>📚 License</h2>
+  <p>This theme is licensed under the GNU General Public License v2 or later.</p>
 </body>
-
 </html>
