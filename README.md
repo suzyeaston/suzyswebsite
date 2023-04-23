@@ -2,25 +2,6 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      font-size: 30px;
-    }
-    h2 {
-      font-size: 25px;
-    }
-    p {
-      font-size: 18px;
-    }
-    code {
-      background-color: #F0F0F0;
-      padding: 2px 5px;
-      border-radius: 3px;
-    }
-  </style>
 </head>
 <body>
   <h1>🚀 Suzy's Orion Theme</h1>
