@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>README.md - Suzy's Orion Theme</title>
   <meta charset="UTF-8">
   <style>
     body {
