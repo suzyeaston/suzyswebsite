@@ -5,23 +5,25 @@ function suzyeaston_theme_setup() {
 add_action('after_setup_theme', 'suzyeaston_theme_setup');
 
 function suzyeaston_scripts() {
-  $theme_version = wp_get_theme()->get('Version');
-  $timestamp = filemtime(get_stylesheet_directory() . '/style.css');
-
-  wp_enqueue_style('suzyswebsite-main-style', get_template_directory_uri() . '/style.css', array(), $theme_version . '-' . $timestamp, 'all');
-  wp_enqueue_style('suzyswebsite-border-animation', get_template_directory_uri() . '/border-animation.css', array(), $theme_version . '-' . $timestamp, 'all');
-
-  wp_enqueue_script('suzyswebsite-custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), $theme_version . '-' . $timestamp, true);
-  wp_enqueue_script('suzyswebsite-galaxy-js', get_template_directory_uri() . '/js/galaxy.js', array('jquery'), $theme_version . '-' . $timestamp, true);
-  wp_enqueue_script('suzyswebsite-typing-effect-js', get_template_directory_uri() . '/js/typing-effect.js', array(), $theme_version . '-' . $timestamp, true);
-  wp_enqueue_script('suzyswebsite-nav-listener-js', get_template_directory_uri() . '/js/nav-listener.js', array('jquery'), $theme_version . '-' . $timestamp, true);
-  wp_enqueue_script('suzyswebsite-email-animation-js', get_template_directory_uri() . '/js/email-animation.js', array(), $theme_version . '-' . $timestamp, true);
+  wp_enqueue_style('suzyswebsite-main-style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+  wp_enqueue_style('suzyswebsite-border-animation', get_template_directory_uri() . '/border-animation.css', array(), '1.0', 'all');
+  wp_enqueue_script('suzyswebsite-custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
+  wp_enqueue_script('suzyswebsite-galaxy-js', get_template_directory_uri() . '/js/galaxy.js', array('jquery'), '1.0', true);
 
   if (is_page('contact')) {
-    wp_enqueue_style('suzyswebsite-retro-style', get_template_directory_uri() . '/retro-style.css', array(), $theme_version . '-' . $timestamp, 'all');
+    wp_enqueue_script('suzyswebsite-contact-js', get_template_directory_uri() . '/js/contact.js', array('jquery'), '1.0', true);
   }
+
+  wp_enqueue_script('suzyswebsite-typing-effect-js', get_template_directory_uri() . '/js/typing-effect.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'suzyeaston_scripts', 5);
+
+function enqueue_retro_style() {
+  if (is_page_template('page-contact.php')) {
+    wp_enqueue_style('retro-style', get_template_directory_uri() . '/retro-style.css', array(), '1.0');
+  }
+}
+add_action('wp_enqueue_scripts', 'enqueue_retro_style');
 
 function suzyeaston_menus() {
   register_nav_menus(
