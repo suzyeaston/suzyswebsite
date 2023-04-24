@@ -13,14 +13,13 @@ function suzyeaston_scripts() {
 
   wp_enqueue_script('suzyswebsite-custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), $theme_version . '-' . $timestamp, true);
   wp_enqueue_script('suzyswebsite-galaxy-js', get_template_directory_uri() . '/js/galaxy.js', array('jquery'), $theme_version . '-' . $timestamp, true);
+  wp_enqueue_script('suzyswebsite-typing-effect-js', get_template_directory_uri() . '/js/typing-effect.js', array(), $theme_version . '-' . $timestamp, true);
+  wp_enqueue_script('suzyswebsite-nav-listener-js', get_template_directory_uri() . '/js/nav-listener.js', array('jquery'), $theme_version . '-' . $timestamp, true);
+  wp_enqueue_script('suzyswebsite-email-animation-js', get_template_directory_uri() . '/js/email-animation.js', array(), $theme_version . '-' . $timestamp, true);
 
   if (is_page('contact')) {
     wp_enqueue_style('suzyswebsite-retro-style', get_template_directory_uri() . '/retro-style.css', array(), $theme_version . '-' . $timestamp, 'all');
-    wp_enqueue_script('suzyswebsite-email-animation-js', get_template_directory_uri() . '/js/email-animation.js', array(), $theme_version . '-' . $timestamp, true);
   }
-
-  wp_enqueue_script('suzyswebsite-nav-listener-js', get_template_directory_uri() . '/js/nav-listener.js', array('jquery'), $theme_version . '-' . $timestamp, true);
-  wp_enqueue_script('suzyswebsite-typing-effect-js', get_template_directory_uri() . '/js/typing-effect.js', array(), $theme_version . '-' . $timestamp, true);
 }
 add_action('wp_enqueue_scripts', 'suzyeaston_scripts', 5);
 
