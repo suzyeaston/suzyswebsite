@@ -2,10 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const bioText = document.getElementById("bio-text");
   const guitarCanvas = document.getElementById("guitar-canvas");
   const startGameButton = document.getElementById("start-game-button");
-  const bioContent = `In the year 2023, but it seems like 1982.... Suzy Easton, a single 40-year-old musician from Vancouver, finds herself battling cosmic foes! Once a national touring bassist, Canucks fan, taco lover, and poker enthusiast, Suzy now faces a rockin' adventure in a universe where harmony is under siege. Can she restore balance to the galaxy, 
-  just as the Canucks defied the odds to reach their first-ever Stanley Cup Final hahahahaha? Join Suzy's quest against the Space Groove Invaders!`;
+  const bioContent = `In the year 2023, but it feels like 1982.... Suzy Easton, a single 40-year-old musician from Vancouver, finds herself battling some crazy cosmic foes! Once a national touring bassist, Canucks fan, taco lover, and poker enthusiast, 
+  Suzy now faces a rockin' adventure in a universe where Metro Vancouver is under harmony siege. Can she restore balance to the city, 
+  just as the Canucks defied the odds to reach their first-ever Stanley Cup Final in 1982 (wait, what?) Join Suzy's quest against the Space Groove Invaders!`;
+  
+  const level1Intro = "Welcome to Level 1 - Metrotown Mall! It's busier than a Space Invaders arcade on a Saturday night. You'll have to navigate through the bustling mall, avoiding shopping carts, reckless parents with strollers, and those pesky kiosk salespeople. Can you make it through without getting lost in the food court?";
 
-  let currentIndex = 0;
+  let currentText = '';
 
   function typeWriter() {
     if (currentIndex < bioContent.length) {
