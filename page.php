@@ -21,6 +21,10 @@
             <canvas id="guitar-canvas" width="300" height="800" style="display:none;"></canvas>
             <button id="start-game-button" style="display:none;">Let's goooooooo</button>
           <?php endif; ?>
+          <?php if (is_page('level-1-metrotown-mall')): ?>
+            <canvas id="skyline-canvas"></canvas>
+            <script src="<?php echo get_template_directory_uri(); ?>/js/skyline.js"></script>
+          <?php endif; ?>
           <?php the_content(); ?>
         </div>
       </article>
