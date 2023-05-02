@@ -20,18 +20,15 @@
             <div id="bio-text"></div>
             <canvas id="guitar-canvas" width="300" height="800" style="display:none;"></canvas>
             <button id="start-game-button" style="display:none;">Let's goooooooo</button>
-          <?php endif; ?>
-         <?php if (is_page('level-1-metrotown-mall')): ?>
-         <canvas id="skyline-canvas"></canvas>
-         <?php
-         $skyline_script_path = get_template_directory_uri() . '/js/skyline.js';
-          if (file_exists($skyline_script_path)): ?>
-            <script src="<?php echo esc_url($skyline_script_path); ?>"></script>
-    <?php else: ?>
-        <p>Could not find the skyline.js script file at <?php echo $skyline_script_path; ?>. Lame dude.</p>
-    <?php endif; ?>
-<?php endif; ?>
-
+          <?php elseif (is_page('level-1-metrotown-mall')): ?>
+            <canvas id="skyline-canvas"></canvas>
+            <?php
+            $skyline_script_path = get_template_directory_uri() . '/js/skyline.js';
+            if (file_exists($skyline_script_path)): ?>
+              <script src="<?php echo esc_url($skyline_script_path); ?>"></script>
+            <?php else: ?>
+              <p>Could not find the skyline.js script file at <?php echo $skyline_script_path; ?>. Lame dude.</p>
+            <?php endif; ?>
           <?php endif; ?>
           <?php the_content(); ?>
         </div>
