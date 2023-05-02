@@ -17,6 +17,7 @@
         <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
         <li><a href="<?php echo esc_url(home_url('/bio')); ?>">Bio</a></li>
         <li><a href="<?php echo esc_url(home_url('/suzys-online-80s-video-game')); ?>">Suzy's Online 80s Video Game</a></li>
+        <li><a href="<?php echo esc_url(home_url('/suzys-online-80s-video-game/level-1-metrotown-mall')); ?>">Level 1 - Metrotown Mall</a></li>
         <li><a href="<?php echo esc_url(home_url('/music')); ?>">Music</a></li>
         <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Contact</a></li>
       </ul>
