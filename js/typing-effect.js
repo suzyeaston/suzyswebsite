@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const level1Intro = "Welcome to Level 1 - Metrotown Mall! It's busier than a Space Invaders arcade on a Saturday night. You'll have to navigate through the bustling mall, avoiding shopping carts, reckless parents with strollers, and those pesky kiosk salespeople. Can you make it through without getting lost in the food court?";
 
   let currentText = '';
+  let currentIndex = 0;
 
   function typeWriter() {
     if (currentIndex < bioContent.length) {
