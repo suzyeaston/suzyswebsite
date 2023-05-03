@@ -4,7 +4,10 @@ function drawSkyline(context, skyline) {
     const width = context.canvas.width / skyline.length;
     const height = context.canvas.height;
   
-    context.fillStyle = 'white';
+    let gradient = context.createLinearGradient(0, 0, 0, height);
+    gradient.addColorStop(0, '#00FF00');
+    gradient.addColorStop(1, '#000');
+    context.fillStyle = gradient;
   
     for (let i = 0; i < skyline.length; i++) {
         const buildingHeight = skyline[i] / 10 * height;
