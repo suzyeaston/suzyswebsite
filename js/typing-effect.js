@@ -11,15 +11,28 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentText = '';
   let currentIndex = 0;
 
-  function typeWriter() {
-    if (currentIndex < bioContent.length) {
-      bioText.innerHTML += bioContent.charAt(currentIndex);
-      currentIndex++;
-      setTimeout(typeWriter, 50);
-    } else {
-      showGuitarAndButton();
-    }
+function typeWriter(text) {
+  if (currentIndex < text.length) {
+    bioText.innerHTML += text.charAt(currentIndex);
+    currentIndex++;
+    setTimeout(() => typeWriter(text), 50);
+  } else {
+    showGuitarAndButton();
   }
+}
+
+if (bioText) {
+  typeWriter(bioContent);
+}
+
+if (startGameButton) {
+  startGameButton.addEventListener('click', () => {
+    bioText.innerHTML = '';
+    currentIndex = 0;
+    typeWriter(level1Intro);
+  });
+}
+
 
   function showGuitarAndButton() {
     if (guitarCanvas && startGameButton) {
