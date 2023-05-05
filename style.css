@@ -143,6 +143,8 @@ nav {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   padding-top: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 nav ul {
@@ -154,15 +156,18 @@ nav ul {
 nav li {
   display: inline;
   margin: 0 15px;
+  position: relative;
 }
 
 nav a {
   color: #00FF00;
   text-decoration: none;
+  padding: 10px 5px;
 }
 
 nav a:hover {
   color: #FFFFFF;
+  background-color: rgba(0, 255, 0, 0.5);
 }
 
 #contact-details {
@@ -191,3 +196,33 @@ nav a:hover {
 .contact-item a:hover {
   color: #FFFFFF;
 }
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  padding: 0;
+  margin-top: 5px;
+  border: 1px solid #00FF00;
+  border-radius: 5px;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul li {
+  float: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul ul li a {
+  padding: 10px 20px;
+}
+
+nav ul ul li a:hover {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
