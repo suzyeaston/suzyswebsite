@@ -11,20 +11,19 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <div id="starry-background"></div>
-  <header class="site-header">
-    <nav>
-      <ul>
-        <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
-        <li><a href="<?php echo esc_url(home_url('/bio')); ?>">Bio</a></li>
-        <li>
-          <a href="<?php echo esc_url(home_url('/suzys-online-80s-video-game')); ?>">Suzy's Online 80s Video Game</a>
-          <ul>
-            <li><a href="<?php echo esc_url(home_url('/suzys-online-80s-video-game/level-1-metrotown-mall')); ?>">Level 1 - Metrotown Mall</a></li>
-          </ul>
-        </li>
-        <li><a href="<?php echo esc_url(home_url('/music')); ?>">Music</a></li>
-        <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
+<header class="site-header">
+  <nav>
+    <ul>
+      <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
+      <li><a href="<?php echo esc_url(home_url('/bio')); ?>">Bio</a></li>
+      <li>
+        <a href="<?php echo esc_url(home_url('/suzys-online-80s-video-game')); ?>">Suzy's Online 80s Video Game</a>
+        <ul class="submenu">
+          <li><a href="<?php echo esc_url(home_url('/suzys-online-80s-video-game/level-1-metrotown-mall')); ?>">Level 1 - Metrotown Mall</a></li>
+        </ul>
+      </li>
+      <li><a href="<?php echo esc_url(home_url('/music')); ?>">Music</a></li>
+      <li><a href="<?php echo esc_url(home_url('/contact')); ?>">Contact</a></li>
+    </ul>
+  </nav>
+</header>
