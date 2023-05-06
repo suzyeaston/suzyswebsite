@@ -99,5 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         playerReadyOverlay.appendChild(playerReadyYes);
         playerReadyOverlay.appendChild(playerReadyNo);
 
-        document.body.appendChild(playerReadyOverlay);});
-});
+       document.body.appendChild(playerReadyOverlay);
+      });
+    });
+  });
