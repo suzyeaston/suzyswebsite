@@ -30,7 +30,7 @@ function displayResults(leagueName, results) {
 
   const resultList = document.createElement("ul");
 
-  if (results) {
+  if (results && results.length > 0) { // Check if results is not null and has items
     results.forEach(result => {
       const listItem = document.createElement("li");
       listItem.textContent = `${result.strEvent}: ${result.intHomeScore}-${result.intAwayScore}`;
