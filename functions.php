@@ -8,6 +8,7 @@ function suzyeaston_scripts() {
   wp_enqueue_style('suzyswebsite-main-style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
   wp_enqueue_style('suzyswebsite-border-animation', get_template_directory_uri() . '/border-animation.css', array(), '1.0', 'all');
   wp_enqueue_script('suzyswebsite-custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
+  wp_enqueue_script('suzyswebsite-scoreboard-js', get_template_directory_uri() . '/js/scoreboard.js', array(), '1.0', true);
   wp_enqueue_script('suzyswebsite-galaxy-js', get_template_directory_uri() . '/js/galaxy.js', array('jquery'), '1.0', true);
   wp_enqueue_script('suzyswebsite-skyline-js', get_template_directory_uri() . '/js/skyline.js', array('jquery'), '1.0', true);
 
