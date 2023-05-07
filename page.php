@@ -37,7 +37,7 @@
   ?>
 </main>
 
-<?php if (is_page('level-1-metrotown-mall')): ?>
+<?php if (is_page('level-1-metrotown-mall') || is_page('Suzy\'s Online 80s Video Game')): ?>
   <?php
     $skyline_script_path = get_template_directory_uri() . '/js/skyline.js';
   ?>
