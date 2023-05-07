@@ -99,14 +99,4 @@ if (startGameButton) {
     ctx.arc(240, 700, 10, 0, 2 * Math.PI);
     ctx.stroke();
   }
-
-  if (bioText) {
-    typeWriter();
-  }
 });
-
-
-
-
-
-
