@@ -6,7 +6,7 @@
     <div id="my-name">Suzy Easton</div>
     <div id="player-start">PLAYER 1</div>
     <div id="click-hint">Click "Player 1" to start</div>
-    <div id="scoreboard"></div>
+    <div id="scoreboard-container"></div>
   <?php endif; ?>
   <?php
   if (have_posts()) :
@@ -41,6 +41,13 @@
     $skyline_script_path = get_template_directory_uri() . '/js/skyline.js';
   ?>
   <script src="<?php echo esc_url($skyline_script_path); ?>"></script>
+<?php endif; ?>
+
+<?php if (is_front_page()): ?>
+  <?php
+    $scoreboard_script_path = get_template_directory_uri() . '/js/scoreboard.js';
+  ?>
+  <script src="<?php echo esc_url($scoreboard_script_path); ?>"></script>
 <?php endif; ?>
 
 <?php
