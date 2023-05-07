@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   const starryBackground = document.getElementById("starry-background");
+  const playerStart = document.getElementById("player-start");
+  const myName = document.getElementById("my-name");
+  let playerStartVisible = false;
 
-  if (starryBackground) {
-    const canvas = document.createElement("canvas");
-    const context = canvas.getContext("2d");
-    const playerStart = document.getElementById("player-start");
-    const myName = document.getElementById("my-name");
+  if (starryBackground && playerStart && myName) {
 
     let playerStartVisible = false;
 
