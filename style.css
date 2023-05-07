@@ -225,3 +225,37 @@ nav ul ul li a {
 nav ul ul li a:hover {
   background-color: rgba(0, 255, 0, 0.5);
 }
+
+#scoreboard {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #00FF00;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10;
+  box-shadow: 0 0 5px #00FF00;
+  animation: blinking 1.2s infinite;
+}
+
+#scoreboard h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+@keyframes blinking {
+  0% {
+    box-shadow: 0 0 5px #00FF00;
+    color: #00FF00;
+  }
+  50% {
+    box-shadow: 0 0 15px #00FF00, 0 0 20px #00FF00 inset;
+    color: #FFFFFF;
+  }
+  100% {
+    box-shadow: 0 0 5px #00FF00;
+    color: #00FF00;
+  }
