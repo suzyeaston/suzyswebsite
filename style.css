@@ -226,7 +226,7 @@ nav ul ul li a:hover {
   background-color: rgba(0, 255, 0, 0.5);
 }
 
-#scoreboard {
+#scoreboard-container {
   position: fixed;
   top: 10px;
   left: 10px;
@@ -241,7 +241,7 @@ nav ul ul li a:hover {
   animation: blinking 1.2s infinite;
 }
 
-#scoreboard h3 {
+#scoreboard-container h2 {
   margin: 0 0 5px;
   font-size: 14px;
 }
@@ -259,3 +259,4 @@ nav ul ul li a:hover {
     box-shadow: 0 0 5px #00FF00;
     color: #00FF00;
   }
+}
