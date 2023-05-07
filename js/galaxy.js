@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let playerStartVisible = false;
 
   if (starryBackground && playerStart && myName) {
-
-    let playerStartVisible = false;
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
