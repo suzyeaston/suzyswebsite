@@ -6,6 +6,7 @@
     <div id="my-name">Suzy Easton</div>
     <div id="player-start">PLAYER 1</div>
     <div id="click-hint">Click "Player 1" to start</div>
+    <div id="scoreboard"></div>
   <?php endif; ?>
   <?php
   if (have_posts()) :
