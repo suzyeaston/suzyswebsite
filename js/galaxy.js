@@ -65,43 +65,42 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    if (playerStart) {
+   if (playerStart) {
   playerStart.addEventListener("click", () => {
     if (!playerStartVisible) {
       playerStart.style.display = "none";
       myName.style.filter = "none";
       playerStartVisible = true;
 
-        // Create Player 1 Ready? overlay and buttons
-        const playerReadyOverlay = document.createElement("div");
-        playerReadyOverlay.id = "player-ready-overlay";
+      // Create Player 1 Ready? overlay and buttons
+      const playerReadyOverlay = document.createElement("div");
+      playerReadyOverlay.id = "player-ready-overlay";
 
-        const playerReadyText = document.createElement("div");
-        playerReadyText.id = "player-ready-text";
-        playerReadyText.innerText = "Player 1 Ready?";
+      const playerReadyText = document.createElement("div");
+      playerReadyText.id = "player-ready-text";
+      playerReadyText.innerText = "Player 1 Ready?";
 
-        const playerReadyYes = document.createElement("button");
-        playerReadyYes.id = "player-ready-yes";
-        playerReadyYes.innerText = "Yes";
-        playerReadyYes.addEventListener("click", () => {
-          window.location.href = "https://suzyeaston.tech/suzys-online-80s-video-game/";
-        });
+      const playerReadyYes = document.createElement("button");
+      playerReadyYes.id = "player-ready-yes";
+      playerReadyYes.innerText = "Yes";
+      playerReadyYes.addEventListener("click", () => {
+        window.location.href = "https://suzyeaston.tech/suzys-online-80s-video-game/";
+      });
 
-        const playerReadyNo = document.createElement("button");
-        playerReadyNo.id = "player-ready-no";
-        playerReadyNo.innerText = "No";
-        playerReadyNo.addEventListener("click", () => {
-          playerReadyOverlay.remove();
-          playerStart.style.display = "block";
-          playerStartVisible = false;
-        });
+      const playerReadyNo = document.createElement("button");
+      playerReadyNo.id = "player-ready-no";
+      playerReadyNo.innerText = "No";
+      playerReadyNo.addEventListener("click", () => {
+        playerReadyOverlay.remove();
+        playerStart.style.display = "block";
+        playerStartVisible = false;
+      });
 
-        playerReadyOverlay.appendChild(playerReadyText);
-        playerReadyOverlay.appendChild(playerReadyYes);
-        playerReadyOverlay.appendChild(playerReadyNo);
+      playerReadyOverlay.appendChild(playerReadyText);
+      playerReadyOverlay.appendChild(playerReadyYes);
+      playerReadyOverlay.appendChild(playerReadyNo);
 
-        document.body.appendChild(playerReadyOverlay);
-      }
-    });
-  }
-});
+      document.body.appendChild(playerReadyOverlay);
+    }
+  });
+}
