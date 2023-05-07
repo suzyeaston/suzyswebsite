@@ -24,23 +24,25 @@ async function fetchResults(leagueId) {
 function displayResults(leagueName, results) {
   const container = document.querySelector("#scoreboard-container");
 
-  const leagueHeader = document.createElement("h2");
-  leagueHeader.textContent = leagueName;
-  container.appendChild(leagueHeader);
+  if (container) {
+    const leagueHeader = document.createElement("h2");
+    leagueHeader.textContent = leagueName;
+    container.appendChild(leagueHeader);
 
-  const resultList = document.createElement("ul");
+    const resultList = document.createElement("ul");
 
-  if (results && results.length > 0) { // Check if results is not null and has items
-    results.forEach(result => {
+    if (results && results.length > 0) { // Check if results is not null and has items
+      results.forEach(result => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${result.strEvent}: ${result.intHomeScore}-${result.intAwayScore}`;
+        resultList.appendChild(listItem);
+      });
+    } else {
       const listItem = document.createElement("li");
-      listItem.textContent = `${result.strEvent}: ${result.intHomeScore}-${result.intAwayScore}`;
+      listItem.textContent = "No results available";
       resultList.appendChild(listItem);
-    });
-  } else {
-    const listItem = document.createElement("li");
-    listItem.textContent = "No results available";
-    resultList.appendChild(listItem);
-  }
+    }
 
-  container.appendChild(resultList);
+    container.appendChild(resultList);
+  }
 }
