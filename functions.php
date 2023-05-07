@@ -12,7 +12,6 @@ function suzyeaston_scripts() {
   wp_enqueue_script('suzyswebsite-skyline-js', get_template_directory_uri() . '/js/skyline.js', array('jquery'), '1.0', true);
 
   wp_enqueue_script('suzyswebsite-typing-effect-js', get_template_directory_uri() . '/js/typing-effect.js', array(), '1.0', true);
-  wp_enqueue_script('scoreboard-script', get_template_directory_uri() . '/js/scoreboard.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'suzyswebsite_scripts');
 
