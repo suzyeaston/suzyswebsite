@@ -43,13 +43,6 @@
   <script src="<?php echo esc_url($skyline_script_path); ?>"></script>
 <?php endif; ?>
 
-<?php if (is_front_page()): ?>
-  <?php
-    $scoreboard_script_path = get_template_directory_uri() . '/js/scoreboard.js';
-  ?>
-  <script src="<?php echo esc_url($scoreboard_script_path); ?>"></script>
-<?php endif; ?>
-
 <?php
   $galaxy_script_path = get_template_directory_uri() . '/js/galaxy.js';
 ?>
