@@ -16,14 +16,14 @@ function suzyeaston_scripts() {
     wp_enqueue_script('suzyswebsite-scoreboard-js', get_template_directory_uri() . '/js/scoreboard.js', array(), '1.0', true);
   }
 }
-add_action('wp_enqueue_scripts', 'suzyswebsite_scripts');
+add_action('wp_enqueue_scripts', 'suzyeaston_scripts');
 
 function enqueue_retro_style() {
   if (is_page_template('page-contact.php')) {
     wp_enqueue_style('retro-style', get_template_directory_uri() . '/retro-style.css', array(), '1.0');
   }
 }
-add_action('wp_enqueue_scripts', 'enqueue_retro_style'); // Corrected this line
+add_action('wp_enqueue_scripts', 'enqueue_retro_style');
 
 function suzyeaston_menus() {
   register_nav_menus(
