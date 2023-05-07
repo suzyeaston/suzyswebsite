@@ -20,8 +20,9 @@
         <div class="entry-content">
           <?php if (is_page('Suzy\'s Online 80s Video Game')): ?>
             <div id="bio-text"></div>
-            <canvas id="guitar-canvas" width="300" height="800" style="display:none;"></canvas>
+            <canvas id="skyline-canvas"></canvas>
             <button id="start-game-button" style="display:none;">Let's goooooooo</button>
+          
           <?php elseif (is_page('level-1-metrotown-mall')): ?>
             <canvas id="skyline-canvas"></canvas>
           <?php endif; ?>
