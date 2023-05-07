@@ -20,7 +20,7 @@ function enqueue_retro_style() {
     wp_enqueue_style('retro-style', get_template_directory_uri() . '/retro-style.css', array(), '1.0');
   }
 }
-add_action('wp_enqueue_scripts', 'enqueue_retro_style');
+add_action('wp_enqueue_scripts', 'suzyeaston_scripts');
 
 function suzyeaston_menus() {
   register_nav_menus(
