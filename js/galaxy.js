@@ -65,11 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    playerStart.addEventListener("click", () => {
-      if (!playerStartVisible) {
-        playerStart.style.display = "none";
-        myName.style.filter = "none";
-        playerStartVisible = true;
+    if (playerStart) {
+  playerStart.addEventListener("click", () => {
+    if (!playerStartVisible) {
+      playerStart.style.display = "none";
+      myName.style.filter = "none";
+      playerStartVisible = true;
 
         // Create Player 1 Ready? overlay and buttons
         const playerReadyOverlay = document.createElement("div");
