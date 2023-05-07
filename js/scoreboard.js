@@ -30,11 +30,17 @@ function displayResults(leagueName, results) {
 
   const resultList = document.createElement("ul");
 
-  results.forEach(result => {
+  if (results) {
+    results.forEach(result => {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${result.strEvent}: ${result.intHomeScore}-${result.intAwayScore}`;
+      resultList.appendChild(listItem);
+    });
+  } else {
     const listItem = document.createElement("li");
-    listItem.textContent = `${result.strEvent}: ${result.intHomeScore}-${result.intAwayScore}`;
+    listItem.textContent = "No results available";
     resultList.appendChild(listItem);
-  });
+  }
 
   container.appendChild(resultList);
 }
