@@ -1,8 +1,4 @@
 <?php
-/**
- * Template Name: Contact Page
- */
-
 get_header(); ?>
 
 <main id="content" class="site-content">
