@@ -45,9 +45,4 @@ get_header(); ?>
   <script src="<?php echo esc_url($skyline_script_path); ?>"></script>
 <?php endif; ?>
 
-<?php
-  $galaxy_script_path = get_template_directory_uri() . '/js/galaxy.js';
-?>
-<script src="<?php echo esc_url($galaxy_script_path); ?>"></script>
-
 <?php get_footer(); ?>
