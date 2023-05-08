@@ -2,8 +2,10 @@
 get_header(); ?>
 
 <main id="content" class="site-content">
-  <?php if (is_front_page()): ?>
+  <?php if (is_front_page() || is_page('contact')): ?>
     <div id="starry-background"></div>
+  <?php endif; ?>
+  <?php if (is_front_page()): ?>
     <div id="my-name">Suzy Easton</div>
     <div id="player-start">PLAYER 1</div>
     <div id="click-hint">Click "Player 1" to start</div>
