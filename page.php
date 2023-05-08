@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: Contact Page
+ */
+
+get_header(); ?>
 
 <main id="content" class="site-content">
   <?php if (is_front_page()): ?>
