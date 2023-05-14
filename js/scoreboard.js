@@ -4,19 +4,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 async function getResults() {
   const leagues = [
-    { name: "NHL", id: "4380" },
-    { name: "NBA", id: "4387" },
-    { name: "Horse Racing", id: "6195" }
+    { name: "NHL", endpoint: "latesticehockey.php" },
+    { name: "NBA", endpoint: "latestbasketball.php" },
+    { name: "Horse Racing", endpoint: "latestracing.php" },
+    { name: "MLB", endpoint: "latestbaseball.php" }
   ];
 
   for (const league of leagues) {
-    const data = await fetchResults(league.id);
+    const data = await fetchResults(league.endpoint);
     displayResults(league.name, data.results);
   }
 }
 
-async function fetchResults(leagueId) {
-  const response = await fetch(`https://www.thesportsdb.com/api/v1/json/3/eventresults.php?id=${leagueId}`);
+async function fetchResults(endpoint) {
+  const response = await fetch(`https://www.thesportsdb.com/api/v1/json/60130162/${endpoint}`);
   const data = await response.json();
   return data;
 }
