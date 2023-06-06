@@ -42,22 +42,20 @@ const leagues = [
   { 
     name: "Expo 86", 
     results: [
-      { strEvent: "World's Biggest Disco Ball", strResult: "Successfully dazzled!"},
-      { strEvent: "Monorail Record", strResult: "Looped 86 times in one day"},
+      { strEvent: "The Expo Skytain Line", strResult: "Transportation and Communication: World in Motion – World in Touch&#8203;``oaicite:{"number":1,
+       "metadata":{"title":"en.wikipedia.org","url":"https://en.wikipedia.org/wiki/Expo_86",
+       "text":"The 1986 World Exposition on Transportation and Communication, or simply Expo 86, was a World's Fair held in Vancouver, British Columbia, 
+       Canada from May 2 until October 13, 1986. The fair, the theme of which was \"Transportation and Communication: World in Motion – World in Touch\", 
+       coincided with Vancouver's centennial and was held on the north shore of False Creek","pub_date":null}}``&#8203;"},
     ]
   },
   { 
     name: "Vancouver Canucks", 
     results: [
       { strEvent: "Stanley Cup Run", strResult: "Made it to the finals in 1994"},
-      { strEvent: "Towel Power", strResult: "Wave those towels!" },
-    ]
-  },
-  { 
-    name: "Seagull Shenanigans", 
-    results: [
-      { strEvent: "Granville Island Market", strResult: "Stole 10 hotdogs in an hour"},
-      { strEvent: "English Bay", strResult: "Dive-bombed 5 beach-goers"},
+      { strEvent: "1991-92 Season Record", strResult: "42 wins, 26 losses, 12 ties, reached NHL Division Finals&#8203;
+       ``oaicite:{"number":2,"metadata":{"title":"www.hockey-reference.com","url":"https://www.hockey-reference.com/teams/VAN/history.html",
+       "text":"1991-92NHLVancouver Canucks*80 42 26 12 96.600 0.31-0.13 1st of 6 Lost NHL Division FinalsP. Quinn (42-26-12)Smythe Clarence Campbell","pub_date":null}}``&#8203;" },
     ]
   },
 ];
