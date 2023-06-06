@@ -1,9 +1,3 @@
-async function fetchResults(leagueId) {
-  const response = await fetch(`https://www.thesportsdb.com/api/v1/json/60130162/eventresults.php?id=${leagueId}`);
-  const data = await response.json();
-  return data;
-}
-
 function displayResults(leagueName, results) {
   const container = document.querySelector("#scoreboard-container");
 
@@ -17,7 +11,7 @@ function displayResults(leagueName, results) {
     if (results && results.length > 0) {
       results.forEach(result => {
         const listItem = document.createElement("li");
-        listItem.textContent = `${result.strEvent}: ${result.intHomeScore}-${result.intAwayScore}`;
+        listItem.textContent = `${result.strEvent}: ${result.strResult}`;
         listItem.style.fontFamily = "'Press Start 2P', cursive";
         listItem.style.fontSize = "12px";
         listItem.style.color = "#00FF00";
@@ -45,14 +39,31 @@ function displayResults(leagueName, results) {
 }
 
 const leagues = [
-  { name: "NHL", id: "4380" },
-  { name: "NBA", id: "4387" },
-  { name: "MLB", id: "4424" }
+  { 
+    name: "Expo 86", 
+    results: [
+      { strEvent: "World's Biggest Disco Ball", strResult: "Successfully dazzled!"},
+      { strEvent: "Monorail Record", strResult: "Looped 86 times in one day"},
+    ]
+  },
+  { 
+    name: "Vancouver Canucks", 
+    results: [
+      { strEvent: "Stanley Cup Run", strResult: "Made it to the finals in 1994"},
+      { strEvent: "Towel Power", strResult: "Wave those towels!" },
+    ]
+  },
+  { 
+    name: "Seagull Shenanigans", 
+    results: [
+      { strEvent: "Granville Island Market", strResult: "Stole 10 hotdogs in an hour"},
+      { strEvent: "English Bay", strResult: "Dive-bombed 5 beach-goers"},
+    ]
+  },
 ];
 
 window.onload = () => {
-  leagues.forEach(async (league) => {
-    const results = await fetchResults(league.id);
-    displayResults(league.name, results);
+  leagues.forEach((league) => {
+    displayResults(league.name, league.results);
   });
 };
